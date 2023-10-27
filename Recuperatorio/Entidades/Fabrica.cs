@@ -16,7 +16,7 @@ namespace Entidades
             this.vehiculos = new List<Vehiculo>();
         }
 
-        public Fabrica(int capacidad)
+        public Fabrica(int capacidad) : this() 
         {
             this.capacidad = capacidad;
         }

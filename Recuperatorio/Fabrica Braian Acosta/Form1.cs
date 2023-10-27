@@ -1,4 +1,8 @@
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
 using Entidades;
+
 namespace Fabrica_Braian_Acosta
 {
     public partial class FrmView : Form
@@ -15,17 +19,14 @@ namespace Fabrica_Braian_Acosta
         private void InicializarFabrica()
         {
             fabrica = new Fabrica(5);
-            cmbTipo.Items.Add("Automovil");
-            cmbTipo.Items.Add("Moto");
-            cmbTipo.Items.Add("Camioneta");
-            //Camioneta camioneta = new Camioneta(EPropulsion.Electrica, true);
-            //fabrica += camioneta;
+            Camioneta camioneta = new Camioneta(EPropulsion.Electrica, true);
+            fabrica += camioneta;
         }
 
         /// <summary>
         /// Realiza las siguientes acciones:
-        /// 1.Asigna al DataSource del lstVehiculos un null.
-        /// 2.Asigna al DataSource del lstVehiculos la lista de vehículos de la fábrica.
+        /// 1. Asigna al DataSource del lstVehiculos un null.
+        /// 2. Asigna al DataSource del lstVehiculos la lista de vehículos de la fábrica.
         /// </summary>
         private void Refrescar()
         {
@@ -80,3 +81,26 @@ namespace Fabrica_Braian_Acosta
         }
     }
 }
+/*
+Nombre de clase: 
+FrmView
+Campos:
+btnEliminar : Button
+btnFabricar : Button
+cmbTipo : ComboBox
+components : IContainer
+fabrica : Fabrica
+lblTipo : Label
+lstVehiculos : ListBox
+pcbFabrica : PictureBox
+Metodos:
+private void btnEliminar_Click(object sender, EventArgs e)
+private void btnFabricar_Click(object sender, EventArgs e)
+private Vehiculo CrearVehiculo()
+protected void Dispose(bool disposing)
+public FrmView()
+private void FrmView_Load(object sender, EventArgs e)
+private void InicializarFabrica()
+private void InitializeComponent()
+private void Refrescar()
+*/
