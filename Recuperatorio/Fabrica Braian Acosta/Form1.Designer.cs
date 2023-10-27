@@ -109,6 +109,7 @@
             Name = "FrmView";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Fabrica de Vehiculos";
+            Load += FrmView_Load;
             ((System.ComponentModel.ISupportInitialize)pcbFabrica).EndInit();
             ResumeLayout(false);
             PerformLayout();

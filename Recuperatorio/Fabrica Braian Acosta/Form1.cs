@@ -15,8 +15,11 @@ namespace Fabrica_Braian_Acosta
         private void InicializarFabrica()
         {
             fabrica = new Fabrica(5);
-            Camioneta camioneta = new Camioneta(EPropulsion.Electrica, true);
-            fabrica += camioneta;
+            cmbTipo.Items.Add("Automovil");
+            cmbTipo.Items.Add("Moto");
+            cmbTipo.Items.Add("Camioneta");
+            //Camioneta camioneta = new Camioneta(EPropulsion.Electrica, true);
+            //fabrica += camioneta;
         }
 
         /// <summary>
@@ -69,6 +72,11 @@ namespace Fabrica_Braian_Acosta
                 fabrica -= vehiculoSeleccionado;
                 Refrescar();
             }
+        }
+
+        private void FrmView_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
