@@ -8,7 +8,7 @@
 
         protected Vehiculo(EPropulsion propulsion)
         {
-            this.numeroDeChasis = new Guid();
+            this.numeroDeChasis = Guid.NewGuid();
             this.esAWD = false;
             this.propulsion = propulsion;
         }

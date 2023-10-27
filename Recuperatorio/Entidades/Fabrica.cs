@@ -31,7 +31,7 @@ namespace Entidades
 
         public static Fabrica operator +(Fabrica fabrica, Vehiculo vehiculo)
         {
-            if (fabrica.Vehiculos.Count <= fabrica.capacidad)
+            if (fabrica.Vehiculos.Count < fabrica.capacidad)
             {
                 fabrica.Vehiculos.Add(vehiculo);
             }
